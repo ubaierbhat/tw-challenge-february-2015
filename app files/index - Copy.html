@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
@@ -27,14 +27,14 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<style>
-
+		
 	</style>
 	<script type="text/javascript">
             function smartPay(){
                 var userid = prompt("Insert your user id here: ", "");
-
+    
                 if (userid != null && userid != "") {
-
+                    
                     //send user id to server here
                     insertOTP();
                 }
@@ -43,12 +43,12 @@
 					smartPay();
                 }
                 else{
-
+                    
                 }
             }
             function insertOTP(){
                 var otp = prompt("Insert OTP that was sent to your mobile here: ", "");
-
+    
                 if (otp != null && otp != "") {
                     //send otp to server here
                     alert("Thank you!\nHave a nice day!");
@@ -58,7 +58,7 @@
                     insertOTP();
                 }
                 else{
-
+                    
                 }
             }
             function pay(){
@@ -67,75 +67,77 @@
         </script>
   </head>
 
-  <body>
+  <body style="background-color:#B1F4FB">
 
+   
 
-    <div class="col-sm-2 col-sm-offset-3 col-md-8 col-md-offset-2 main">
-      <h1 class="page-header">Shopping Cart</h1>
-    </div>
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-sm-2 col-sm-offset-3 col-md-8 col-md-offset-2 main">
+          <h1 class="page-header">Shopping Cart</h1>
 
-    <table align="center" width="600" 	style="font-family: Tahoma; font-size: 20px;">
-      <tr>
-        <td>
-          <table class="table">
-            <thead>
-      <tr>
-                <th>Item</th>
-                <th>Price</th>
-                <th>Qty</th>
-                <th>Amount</th>
-        <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-        <td>Coca-Cola 1L</a></td>
-                <td>1</a></td>
-                <td>x 2</a></td>
-        <td>€ 2</a></td>
-                <td>
-        <button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
-        </td>
-              </tr>
-              <tr>
-        <td>Pizza</a></td>
-                <td>2</a></td>
-                <td>x 1</a></td>
-        <td>€ 2</a></td>
-                <td>
-        <button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
-        </td>
-              </tr>
-      <tr>
-        <td>Snickers</a></td>
-                <td>1</a></td>
-                <td>x 2</a></td>
-        <td>€ 2</a></td>
-                <td>
-        <button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
-        </td>
-              </tr>
-      <tr>
-        <td><b>Total</b></a></td>
-                <td></td>
-                <td></td>
-        <td><b>€ 6</b></a></td>
-                <td>
-        <button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
-        </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-        <td valign="bottom">
-          <div id="div_button" >
-            <button id="btn_smart_pay" type="button" class="btn btn-lg btn-success"  onclick="smartPay()"><i>smartPay</i></button>
-            <button id="btn_pay" type="button" class="btn btn-lg btn-default" onclick="pay()">Pay</button>
+          <div class="row placeholders">
+            
+          </div>          
+          <div >
+            <table class="table table-bordered">
+              <thead>                
+				<tr>
+                  <th>Item</th>
+                  <th>Price</th>
+                  <th>Qty</th>
+                  <th>Amount</th>
+				  <th></th>
+                </tr>				
+              </thead>
+              <tbody>
+                <tr>
+				  <td>Coca-Cola 1L</a></td>
+                  <td>1</a></td>
+                  <td>x 2</a></td>
+				  <td>€ 2</a></td>
+                  <td>
+					<button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
+					</td>
+                </tr>
+                <tr>
+				  <td>Pizza</a></td>
+                  <td>2</a></td>
+                  <td>x 1</a></td>
+				  <td>€ 2</a></td>
+                  <td>
+					<button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
+					</td>
+                </tr>
+				<tr>
+				  <td>Snickers</a></td>
+                  <td>1</a></td>
+                  <td>x 2</a></td>
+				  <td>€ 2</a></td>
+                  <td>
+					<button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
+					</td>
+                </tr>
+				<tr>
+				  <td><b>Total</b></a></td>
+                  <td></td>
+                  <td></td>
+				  <td><b>€ 2</b></a></td>
+                  <td>
+					<button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
+					</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </td>
-      </tr>
-    </table>
-
+			<div id="div_button" style="position:relative; right:20px">
+				<button id="btn_smart_pay" type="button" class="btn btn-lg btn-success" style="width:200px; height:150px; background-color:#136210" onclick="smartPay()">Smart Pay</button>
+				<button id="btn_pay" type="button" class="btn btn-lg btn-default" style="width:150px; height:150px; background-color:#68A483" onclick="pay()">Pay</button>
+			</div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
