@@ -13,7 +13,9 @@
                placeholder="Password" required>
         <p class="help-block error-message" ng-show="credentials.submitted && !successAuth">Invalid username or password</p>
         <input ng-disabled="!credentials.submitBtnActive" class="btn btn-lg btn-primary btn-block" type="submit" name="submitbutton" value="Login">
-        <a id="no-access" ng-click="forgot()">Can't access your account?</a>
+        <a id="no-access" ng-click="forgot()">Can't access your account?</a> <p></p>
+        <a id="no-access" ng-click="signup()">Don't have an account? Sign up here!</a>
+
         </form>
     </div>
 </div>
