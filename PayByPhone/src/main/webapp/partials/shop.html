@@ -1,0 +1,85 @@
+<div ng-controller="AddMoneyCtrl">
+    <title>Shopping Cart</title>
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]> -->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <body style="background-color:#B1F4FB">
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-2 col-sm-offset-3 col-md-8 col-md-offset-2 main">
+                <h1 class="page-header">Shopping Cart</h1>
+
+                <div class="row placeholders">
+
+                </div>
+                <div >
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Amount</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Coca-Cola 1L</a></td>
+                            <td>1</a></td>
+                            <td>x 2</a></td>
+                            <td>€ 2</a></td>
+                            <td>
+                                <button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pizza</a></td>
+                            <td>2</a></td>
+                            <td>x 1</a></td>
+                            <td>€ 2</a></td>
+                            <td>
+                                <button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Snickers</a></td>
+                            <td>1</a></td>
+                            <td>x 2</a></td>
+                            <td>€ 2</a></td>
+                            <td>
+                                <button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Total</b></a></td>
+                            <td></td>
+                            <td></td>
+                            <td><b>€ 2</b></a></td>
+                            <td>
+                                <button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="div_button" style="position:relative; right:20px">
+                    <button id="btn_smart_pay" type="button" class="btn btn-lg btn-success" style="width:200px; height:150px; background-color:#136210" onclick="smartPay()">Smart Pay</button>
+                    <button id="btn_pay" type="button" class="btn btn-lg btn-default" style="width:150px; height:150px; background-color:#68A483" onclick="pay()">Pay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

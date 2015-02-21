@@ -19,34 +19,33 @@ app.config(function ($routeProvider) {
             templateUrl: 'partials/balance.html',
             controller: 'BalanceCtrl'
         })
+
+        .when(
+        '/shop', {
+            templateUrl: 'partials/shop.html',
+            controller: 'ShopCtrl'
+        })
+
+        .when(
+        '/register', {
+            templateUrl: 'partials/register.html',
+            controller: 'RegisterCtrl'
+        })
+        .when(
+        '/addMoney', {
+            templateUrl: 'partials/addMoney.html',
+            controller: 'AddMoneyCtrl'
+        })
+        .when(
+        '/confirmation', {
+            templateUrl: 'partials/confirmation.html',
+            controller: 'ConfirmationCtrl'
+        })
+
         .when(
         '/login', {
             templateUrl: 'partials/login.html',
             controller: 'LoginCtrl'
-        })
-        .when(
-        '/patsgiven', {
-            templateUrl: 'partials/given.html',
-            controller: 'UserStatisticsCtrl',
-            authenticate: true
-        })
-        .when(
-        '/patsreceived', {
-            templateUrl: 'partials/received.html',
-            controller: 'UserStatisticsCtrl',
-            authenticate: true
-        })
-        .when(
-            '/globalstatistics', {
-            templateUrl: 'partials/globalstatistics.html',
-            controller: 'GlobalStatisticsCtrl',
-            authenticate: true
-        })
-        .when(
-            '/chart', {
-            templateUrl: 'partials/chart.html',
-            controller: 'ChartCtrl',
-            authenticate: true
         })
         .otherwise({
             redirectTo: '/login'

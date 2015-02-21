@@ -4,8 +4,22 @@ app.controller('RootCtrl', function ($scope) {
     //Nothing to do here
 });
 
-app.controller('BalanceCtrl', function ($scope) {
-    //Nothing to do here
+app.controller('AddMoneyCtrl', function ($scope, $modal, $location) {
+    $scope.addMoneyButton = function () {
+        $location.path('/confirmation');
+    };
+});
+
+app.controller('BalanceCtrl', function ($scope, $modal, $location) {
+    $scope.addBalance = function () {
+        $location.path('/addMoney');
+    };
+});
+
+app.controller('RegisterCtrl', function ($scope, $modal, $location) {
+    $scope.register = function () {
+        $location.path('/balance');
+    };
 });
 
 app.controller('LoginCtrl', function ($scope, $modal, $location, Auth) {
@@ -22,6 +36,14 @@ app.controller('LoginCtrl', function ($scope, $modal, $location, Auth) {
         $location.path('/balance');
 
     };
+
+    $scope.signup = function(){
+
+        $location.path('/register');
+
+    };
+
+
 
     $scope.forgot = function(){
 
