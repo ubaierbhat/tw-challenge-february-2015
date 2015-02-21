@@ -4,12 +4,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Dashboard - Reviewer Dashboard</title>
+    <title>Shopping Cart</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -26,9 +26,48 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<style>
+		
+	</style>
+	<script type="text/javascript">
+            function smartPay(){
+                var userid = prompt("Insert your user id here: ", "");
+    
+                if (userid != null && userid != "") {
+                    
+                    //send user id to server here
+                    insertOTP();
+                }
+                else if(userid == ""){
+                    alert("User id cannot be empty!");
+					smartPay();
+                }
+                else{
+                    
+                }
+            }
+            function insertOTP(){
+                var otp = prompt("Insert OTP that was sent to your mobile here: ", "");
+    
+                if (otp != null && otp != "") {
+                    //send otp to server here
+                    alert("Thank you!\nHave a nice day!");
+                }
+                else if(otp == ""){
+                    alert("OTP cannot be empty!");
+                    insertOTP();
+                }
+                else{
+                    
+                }
+            }
+            function pay(){
+                alert("pay");
+            }
+        </script>
   </head>
 
-  <body>
+  <body style="background-color:#B1F4FB">
 
    
 
@@ -41,7 +80,7 @@
           <div class="row placeholders">
             
           </div>          
-          <div class="table-responsive">
+          <div >
             <table class="table table-bordered">
               <thead>                
 				<tr>
@@ -72,7 +111,7 @@
 					</td>
                 </tr>
 				<tr>
-				  <td>Coca-Cola 1L</a></td>
+				  <td>Snickers</a></td>
                   <td>1</a></td>
                   <td>x 2</a></td>
 				  <td>€ 2</a></td>
@@ -80,11 +119,22 @@
 					<button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
 					</td>
                 </tr>
+				<tr>
+				  <td><b>Total</b></a></td>
+                  <td></td>
+                  <td></td>
+				  <td><b>€ 2</b></a></td>
+                  <td>
+					<button type="button" class="btn btn-danger"  aria-expanded="false">-</span></button>
+					</td>
+                </tr>
               </tbody>
             </table>
           </div>
-		  
-
+			<div id="div_button" style="position:relative; right:20px">
+				<button id="btn_smart_pay" type="button" class="btn btn-lg btn-success" style="width:200px; height:150px; background-color:#136210" onclick="smartPay()">Smart Pay</button>
+				<button id="btn_pay" type="button" class="btn btn-lg btn-default" style="width:150px; height:150px; background-color:#68A483" onclick="pay()">Pay</button>
+			</div>
         </div>
       </div>
     </div>
