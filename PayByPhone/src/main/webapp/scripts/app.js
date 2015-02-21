@@ -4,11 +4,17 @@ app.controller('RootCtrl', function ($scope) {
     //Nothing to do here
 });
 
+app.controller('BalanceCtrl', function ($scope) {
+    //Nothing to do here
+});
+
 app.controller('LoginCtrl', function ($scope, $modal, $location, Auth) {
     $scope.credentials = {
         submitted: false,
         submitBtnActive: true
     };
+
+
 
     $scope.submitLoginForm = function () {
         $scope.credentials.submitBtnActive = false;
