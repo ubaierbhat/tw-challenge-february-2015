@@ -1,0 +1,19 @@
+<div ng-controller="LoginCtrl">
+    <div class="panel panel-default pull-left">
+        <h1 class="form-signin-heading">What is PayByPhone</h1>
+        <p> Fastest way to pay with your phone anywhere</p>
+    </div>
+
+    <div class="panel panel-default pull-right">
+        <form name="form" class="center-block" ng-submit="submitLoginForm()">
+        <h1 class="form-signin-heading">Login to PayByPhone</h1>
+        <input class="form-control" type="text" name="username" ng-model="credentials.username"
+               placeholder="Username" required autofocus>
+        <input class="form-control" type="password" name="password" ng-model="credentials.password"
+               placeholder="Password" required>
+        <p class="help-block error-message" ng-show="credentials.submitted && !successAuth">Invalid username or password</p>
+        <input ng-disabled="!credentials.submitBtnActive" class="btn btn-lg btn-primary btn-block" type="submit" name="submitbutton" value="Login">
+        <a id="no-access" ng-click="forgot()">Can't access your account?</a>
+        </form>
+    </div>
+</div>
